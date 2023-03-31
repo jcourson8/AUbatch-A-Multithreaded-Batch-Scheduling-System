@@ -1,4 +1,31 @@
 # AUbatch-A-Multithreaded-Batch-Scheduling-System
+### Example Compilation and Run
+Compile everything including the benchmark job "process" for testing:\
+```make all```
+\
+To run:\
+```./aubatch```
+
+### Example Use
+```
+Welcome to James' batch job scheduler Version 1.0
+Type ‘help’ to find more about AUbatch commands.
+> help
+AUbatch help menu
+[run] <job> <time> <priority>: submit a job named <job>,
+                               execution time is <time>,
+                               priority is <pri>.
+[list] display the job status.
+[fcfs] change the scheduling policy to FCFS.
+[sjf] change the scheduling policy to SJF.
+[priority] change the scheduling policy to priority.
+[test] <benchmark> <policy> <num_of_jobs> <priority_levels>
+       <min_CPU_time> <max_CPU_time>
+[quit] exit AUbatch
+```
+
+
+
 ## Introduction
 The aim of this project was to design and implement a batch scheduling system called AUbatch, using the C programming language and the Pthread library. The system is made up of two threads, the scheduling thread, and the dispatching thread, which work together to enforce scheduling policies and execute submitted jobs. Synchronization between the two threads was implemented using condition variables and mutexes to solve critical section problems. Three scheduling policies were implemented: First Come, First Served (FCFS), Shortest Job First (SJF), and Priority- based scheduling. The performance of these policies was compared under various workload conditions to determine their effectiveness. This report provides an overview of the project, including the design and implementation of AUbatch, the synchronization of the threads, and the comparison of the scheduling policies.
 
